@@ -1,13 +1,15 @@
 {
-    "name": "react-ts-template",
-    "version": "0.1.0",
+    "name": "my-form-builder",
+    "version": "1.0.0",
     "dependencies": {
-        "@tanstack/react-query": "^4.3.1",
-        "@tanstack/react-query-devtools": "^4.3.1",
+        "@heroicons/react": "^2.0.11",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.3.0",
-        "react-scripts": "^5.0.1"
+        "react-scripts": "^5.0.1",
+        "react-sortablejs": "^6.1.4",
+        "react-syntax-highlighter": "^15.5.0",
+        "sortablejs": "^1.15.0"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -41,6 +43,8 @@
         "@types/react": "^18.0.19",
         "@types/react-dom": "^18.0.6",
         "@types/react-router-dom": "^5.3.3",
+        "@types/react-syntax-highlighter": "^15.5.5",
+        "@types/sortablejs": "^1.15.0",
         "@typescript-eslint/eslint-plugin": "^5.32.0",
         "@typescript-eslint/parser": "^5.32.0",
         "autoprefixer": "^10.4.8",
