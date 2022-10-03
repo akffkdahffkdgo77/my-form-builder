@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input:focus {
+    outline-color: #8785a2;
+    outline-style: dashed;
+}
