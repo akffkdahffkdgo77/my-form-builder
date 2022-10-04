@@ -19,7 +19,7 @@ export default function Validation({ showValidation, validations, setValidations
                             name="max"
                             value={validations.max}
                             onChange={(e) => setValidations((prev) => ({ ...prev, max: e.target.value }))}
-                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#F6F6F6]"
+                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#8785A2]"
                         />
                     </label>
                     <label htmlFor="min" className="block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
@@ -30,7 +30,7 @@ export default function Validation({ showValidation, validations, setValidations
                             name="min"
                             value={validations.min}
                             onChange={(e) => setValidations((prev) => ({ ...prev, min: e.target.value }))}
-                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#F6F6F6]"
+                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#8785A2]"
                         />
                     </label>
                     <label htmlFor="maxLength" className="block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
@@ -41,7 +41,7 @@ export default function Validation({ showValidation, validations, setValidations
                             name="maxLength"
                             value={validations.maxLength}
                             onChange={(e) => setValidations((prev) => ({ ...prev, maxLength: e.target.value }))}
-                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#F6F6F6]"
+                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#8785A2]"
                         />
                     </label>
                     <label htmlFor="pattern" className="block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
@@ -52,7 +52,7 @@ export default function Validation({ showValidation, validations, setValidations
                             name="pattern"
                             value={validations.pattern}
                             onChange={(e) => setValidations((prev) => ({ ...prev, pattern: e.target.value }))}
-                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#F6F6F6]"
+                            className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#8785A2]"
                         />
                     </label>
                 </div>

@@ -12,9 +12,9 @@ export default function Input({ name, setName }: IProps) {
                 type="text"
                 name="inputName"
                 value={name}
-                onChange={(e) => setName(e.target.name)}
+                onChange={(e) => setName(e.target.value)}
                 placeholder="Please enter the name of input"
-                className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#F6F6F6]"
+                className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#8785A2]"
             />
         </label>
     );
