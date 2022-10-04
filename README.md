@@ -1,14 +1,23 @@
-# react typescript template
+# my form builder
 
-## Installed Packages
+## v1.0.0 (2022.10.03 ~ 2022.10.10)
 
--   react v18
--   react-query v4
+-   Layout
+-   Creator
+-   Code
+-   모바일 호환
+
+## NPM Packages
+
+-   React v18 + TypeScript
+-   @heroicons/react
 -   react-router-dom v6
+-   react-sortablejs
+-   react-syntax-highlighter
+-   sortablejs
 -   tailwindcss
--   typescript
 
 ## Code Convention
 
--   ESLint - Airbnb
+-   ESLint - AirBnB
 -   Prettier
