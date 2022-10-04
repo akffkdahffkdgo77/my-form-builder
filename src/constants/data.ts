@@ -8,7 +8,5 @@ export const OPTIONS = [
     { value: 'range', label: 'Range' },
     { value: 'date', label: 'Date Search' },
     { value: 'tel', label: 'Telephone' },
-    { value: 'select', label: 'Select' },
-    { value: 'radio', label: 'Radio' },
     { value: 'checkbox', label: 'CheckBox' }
 ];

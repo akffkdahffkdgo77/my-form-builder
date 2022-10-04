@@ -9,6 +9,8 @@ const defaultHTML = ` <input type="text" name="Name" placeholder="Name" />\n  <i
 
 export default function Home() {
     const [html, setHtml] = useState(defaultHTML);
+
+    const [validations, setValidations] = useState({ max: '', min: '', maxLength: '', pattern: '' });
     const [selectedOption, setSelectedOption] = useState(OPTIONS[0]);
     const [list, setList] = useState<{ id: number; type: string; name: string }[]>([
         { id: 1, type: 'text', name: 'Name' },
@@ -16,16 +18,18 @@ export default function Home() {
         { id: 3, type: 'tel', name: 'Mobile Number' }
     ]);
     const [name, setName] = useState('');
-    const [validations, setValidations] = useState({ max: '', min: '', maxLength: '', pattern: '' });
 
-    const handleSelect = ({ label, value }: { label: string; value: string }) => {
-        setSelectedOption({ label, value });
-    };
+    const handleSelect = ({ label, value }: { label: string; value: string }) => setSelectedOption({ label, value });
 
+    // TODO: select추가 및 options 입력 input 추가하기
+    // TODO: radio추가 및 options 입력 input 추가하기
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         setList((prev) => [...prev, { id: list.length + 1, type: selectedOption.value, name }]);
-        setHtml((prev) => `${prev}\n  <input type="${selectedOption.value}" name="${name}" placeholder="${name}" />`);
+        setHtml(
+            (prev) =>
+                `${prev}\n  <input type="${selectedOption.value}" name="${name}" placeholder="${name}" min="${validations.min}" max="${validations.max}" maxLength="${validations.maxLength}" pattern="${validations.pattern}" />`
+        );
     };
 
     return (
