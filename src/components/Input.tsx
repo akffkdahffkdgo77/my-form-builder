@@ -1,19 +1,22 @@
 interface IProps {
     name: string;
-    setName: React.Dispatch<React.SetStateAction<string>>;
+    value: string;
+    placeholder: string;
+    setValue: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function Input({ name, setName }: IProps) {
+export default function Input({ placeholder, name, value, setValue }: IProps) {
     return (
-        <label htmlFor="name" className="block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
+        <label htmlFor={name} className="block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
             name
             <input
-                id="name"
+                id={name}
                 type="text"
-                name="inputName"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Please enter the name of input"
+                name={name}
+                required
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                placeholder={placeholder}
                 className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#8785A2]"
             />
         </label>
