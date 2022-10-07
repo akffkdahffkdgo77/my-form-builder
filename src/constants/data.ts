@@ -17,5 +17,5 @@ export const DEFAULT_VALUES = {
     option: OPTIONS[0],
     options: '',
     validations: { max: '', min: '', maxLength: '', pattern: '' },
-    html: ` <input type="text" name="Name" placeholder="Name" />\n  <input type="email" name="Email Address" placeholder="Email Address" />\n  <input type="tel" name="Mobile Number" placeholder="Mobile Number" />`
+    html: `<form onSubmit={onSubmit}>\n  <input type="text" name="Name" placeholder="Name" />\n  <input type="email" name="Email Address" placeholder="Email Address" />\n  <input type="tel" name="Mobile Number" placeholder="Mobile Number" />`
 };
