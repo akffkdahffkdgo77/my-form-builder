@@ -54,15 +54,6 @@ export default function Home() {
             <h2 className="text-3xl text-[#FFC7C7] mb-10">Simple HTML Form Builder</h2>
             <div className="w-full min-h-[300px] lg:min-h-[500px] flex justify-center items-start gap-5 flex-wrap xl:flex-nowrap">
                 <Layout list={list} setList={setList} />
-                <label htmlFor="test">
-                    test <input id="test" type="radio" name="test" value="test" />
-                </label>
-                <label htmlFor="abcd">
-                    abcd <input id="abcd" type="radio" name="test" value="abcd" />
-                </label>
-                <label htmlFor="dfsdf">
-                    dfsdf <input id="dfsdf" type="radio" name="test" value="dfsdf" />
-                </label>
                 <Creator
                     name={name}
                     setName={setName}
