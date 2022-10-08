@@ -1,22 +1,18 @@
-import { SetStateAction } from 'react';
-
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
 import { ReactSortable } from 'react-sortablejs';
 
+import { ListType } from 'types';
+
 interface IProps {
-    list: {
-        id: number;
-        type: string;
-        name: string;
-    }[];
-    setList: React.Dispatch<SetStateAction<{ id: number; type: string; name: string }[]>>;
+    list: ListType[];
+    onClick: (newState: ListType[]) => void;
 }
 
-export default function Sortable({ list, setList }: IProps) {
+export default function Sortable({ list, onClick }: IProps) {
     return (
         <section className="border border-[#8785A2] w-full min-w-[300px] max-w-[500px] min-h-[300px] lg:h-full lg:min-h-full rounded-md p-5">
             <h3 className="w-full text-center text-[#8785A2] text-[20px] font-bold mb-5">Layout</h3>
-            <ReactSortable list={list} setList={setList}>
+            <ReactSortable list={list} setList={onClick}>
                 {list.map((item) => (
                     <div
                         key={item.id}
