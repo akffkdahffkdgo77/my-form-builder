@@ -40,7 +40,10 @@ export default function Select({ selectedOption, handleSelect }: IProps) {
             </div>
             <ul className={`${show ? 'block' : 'hidden'} absolute top-[62px] left-[-1px] right-[-1px] bg-white rounded-md overflow-hidden`}>
                 {OPTIONS.map(({ label, value }) => (
-                    <li key={value} className="h-10 border-b border-[#F6F6F6] [line-height:40px] px-2.5 text-[#8785A2] hover:bg-[#FFE2E2]">
+                    <li
+                        key={value}
+                        className={`${selectedOption.value === value ? 'bg-[#FFE2E2]' : 'bg-white'} h-10 border-b border-[#F6F6F6] [line-height:40px] px-2.5 text-[#8785A2] hover:bg-[#FFE2E2]`}
+                    >
                         <button className="w-full" type="button" onClick={() => onClick({ label, value })}>
                             {label}
                         </button>
