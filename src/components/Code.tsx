@@ -23,7 +23,7 @@ export default function CodeSyntaxHighlighter({ html }: IProps) {
                 timerId.current = setTimeout(() => setIsCopied(false), 300);
             });
         } else {
-            console.log('clipboard api not supported');
+            throw new Error('Clipboard API is not supported');
         }
     };
 
