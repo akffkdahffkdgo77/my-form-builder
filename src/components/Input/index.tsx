@@ -1,11 +1,6 @@
-interface IProps {
-    name: string;
-    value: string;
-    placeholder: string;
-    setValue: React.Dispatch<React.SetStateAction<string>>;
-}
+import { IInput } from 'components/Input/types';
 
-export default function Input({ placeholder, name, value, setValue }: IProps) {
+export default function Input({ placeholder, name, value, setValue }: IInput) {
     return (
         <label htmlFor={name} className="block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
             name

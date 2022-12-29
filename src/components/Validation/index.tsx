@@ -1,12 +1,6 @@
-import React from 'react';
+import { IValidation } from 'components/Validation/types';
 
-interface IProps {
-    showValidation: boolean;
-    validations: { max: string; min: string; maxLength: string; pattern: string };
-    setValidations: React.Dispatch<React.SetStateAction<{ max: string; min: string; maxLength: string; pattern: string }>>;
-}
-
-export default function Validation({ showValidation, validations, setValidations }: IProps) {
+export default function Validation({ showValidation, validations, setValidations }: IValidation) {
     return (
         <>
             {showValidation && (

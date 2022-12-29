@@ -1,22 +1,9 @@
 import { useState } from 'react';
 
-import Input from './Input';
-import Select from './Select';
-import Validation from './Validation';
+import { Input, Select, Validation } from 'components';
+import { ICreator } from 'pages/Home/components/Creator/types';
 
-interface IProps {
-    name: string;
-    setName: React.Dispatch<React.SetStateAction<string>>;
-    options: string;
-    setOptions: React.Dispatch<React.SetStateAction<string>>;
-    validations: { max: string; min: string; maxLength: string; pattern: string };
-    setValidations: React.Dispatch<React.SetStateAction<{ max: string; min: string; maxLength: string; pattern: string }>>;
-    selectedOption: { label: string; value: string };
-    handleSelect: (option: { label: string; value: string }) => void;
-    handleSubmit: (e: React.FormEvent) => void;
-}
-
-export default function Form({ name, setName, options, setOptions, validations, setValidations, selectedOption, handleSelect, handleSubmit }: IProps) {
+export default function Form({ name, setName, options, setOptions, validations, setValidations, selectedOption, handleSelect, handleSubmit }: ICreator) {
     const [showValidation, setShowValidation] = useState(false);
 
     return (

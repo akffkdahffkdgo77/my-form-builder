@@ -1,10 +1,8 @@
 import { FormEvent, useState } from 'react';
 
-import Code from 'components/Code';
-import Creator from 'components/Creator';
-import Layout from 'components/Layout';
 import { DEFAULT_VALUES } from 'constants/data';
-import { ListType } from 'types';
+import { Code, Creator, Layout } from 'pages/Home/components';
+import { ListType } from 'pages/Home/types';
 
 export default function Home() {
     const [html, setHtml] = useState(DEFAULT_VALUES.html);

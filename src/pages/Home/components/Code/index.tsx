@@ -3,11 +3,9 @@ import { useEffect, useRef, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-interface IProps {
-    html: string;
-}
+import { ICode } from 'pages/Home/components/Code/types';
 
-export default function CodeSyntaxHighlighter({ html }: IProps) {
+export default function CodeSyntaxHighlighter({ html }: ICode) {
     const timerId = useRef<NodeJS.Timeout>();
     const [isCopied, setIsCopied] = useState(false);
 

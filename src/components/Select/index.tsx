@@ -1,13 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 
+import { ISelect } from 'components/Select/types';
 import { OPTIONS } from 'constants/data';
 
-interface IProps {
-    selectedOption: { label: string; value: string };
-    handleSelect: (option: { label: string; value: string }) => void;
-}
-
-export default function Select({ selectedOption, handleSelect }: IProps) {
+export default function Select({ selectedOption, handleSelect }: ISelect) {
     const [show, setShow] = useState(false);
 
     const selectRef = useRef<HTMLDivElement>(null);
