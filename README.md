@@ -24,14 +24,56 @@ Clone Coding [react-hook-form's form builder](https://react-hook-form.com/form-b
 -   Delete
 -   Delete All
 
+## Folder Structure
+
+```
+.
+├── app
+│   └── App.tsx
+├── components
+│   ├── Input
+│   │   ├── index.tsx
+│   │   └── types.ts
+│   ├── Select
+│   │   ├── index.tsx
+│   │   └── types.ts
+│   ├── Validation
+│   │   ├── index.tsx
+│   │   └── types.ts
+│   └── index.ts
+├── constants
+│   └── data.ts
+├── index.tsx
+├── pages
+│   └── Home
+│       ├── components
+│       │   ├── Code
+│       │   │   ├── index.tsx
+│       │   │   └── types.ts
+│       │   ├── Creator
+│       │   │   ├── index.tsx
+│       │   │   └── types.ts
+│       │   ├── Layout
+│       │   │   ├── index.tsx
+│       │   │   └── types.ts
+│       │   └── index.ts
+│       ├── index.tsx
+│       └── types.ts
+├── react-app-env.d.ts
+├── routes
+│   └── index.tsx
+└── styles
+    └── index.css
+```
+
 ## NPM Packages
 
 -   React v18 + TypeScript
--   @heroicons/react
 -   react-router-dom v6
 -   react-sortablejs
--   react-syntax-highlighter
 -   sortablejs
+-   react-syntax-highlighter
+-   @heroicons/react
 -   tailwindcss
 
 ## Code Convention
