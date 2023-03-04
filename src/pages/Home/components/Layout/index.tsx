@@ -1,9 +1,9 @@
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
 import { ReactSortable } from 'react-sortablejs';
 
-import { ILayout } from 'pages/Home/components/Layout/types';
+import type { LayoutPropsType } from 'pages/Home/components/Layout/types';
 
-export default function Sortable({ list, onClick }: ILayout) {
+export default function Layout({ list, onClick }: LayoutPropsType) {
     return (
         <section className="border border-[#8785A2] w-full min-w-[300px] max-w-[500px] min-h-[300px] lg:h-full lg:min-h-full rounded-md p-5">
             <h3 className="w-full text-center text-[#8785A2] text-[20px] font-bold mb-5">Layout</h3>

@@ -1,3 +1,3 @@
-export interface ICode {
+export type CodePropsType = {
     html: string;
-}
+};

@@ -1,4 +1,6 @@
-export interface ISelect {
-    selectedOption: { label: string; value: string };
-    handleSelect: (option: { label: string; value: string }) => void;
-}
+type OptionType = { label: string; value: string };
+
+export type SelectPropsType = {
+    selectedOption: OptionType;
+    onSelect: (option: OptionType) => void;
+};

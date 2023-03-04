@@ -3,13 +3,13 @@ import { useEffect, useRef, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-import { ICode } from 'pages/Home/components/Code/types';
+import type { CodePropsType } from 'pages/Home/components/Code/types';
 
-export default function CodeSyntaxHighlighter({ html }: ICode) {
+export default function Code({ html }: CodePropsType) {
     const timerId = useRef<NodeJS.Timeout>();
     const [isCopied, setIsCopied] = useState(false);
 
-    const onClick = () => {
+    const handleClick = () => {
         if (navigator.clipboard) {
             const textarea = document.createElement('textarea');
             textarea.innerHTML = `${html}\n  <input type="submit" value="제출하기" />\n</form>`;
@@ -35,7 +35,7 @@ export default function CodeSyntaxHighlighter({ html }: ICode) {
             <button
                 className={`${isCopied ? 'bg-[#8785A2] text-[#FFC7C7]' : 'bg-[#FFC7C7] text-[#8785A2]'} absolute top-[70px] right-5 text-[12px] uppercase py-[5px] px-2.5`}
                 type="button"
-                onClick={onClick}
+                onClick={handleClick}
             >
                 Copy
             </button>

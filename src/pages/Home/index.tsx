@@ -2,7 +2,8 @@ import { FormEvent, useState } from 'react';
 
 import { DEFAULT_VALUES } from 'constants/data';
 import { Code, Creator, Layout } from 'pages/Home/components';
-import { ListType } from 'pages/Home/types';
+
+import type { ListType } from 'pages/Home/types';
 
 export default function Home() {
     const [html, setHtml] = useState(DEFAULT_VALUES.html);
@@ -47,7 +48,7 @@ export default function Home() {
         setOptions(DEFAULT_VALUES.options);
     };
 
-    const onClick = (newState: ListType[]) => {
+    const handleClick = (newState: ListType[]) => {
         setList(newState);
         let newHTML = `<form onSubmit={onSubmit}>`;
         newState.forEach((data) => {
@@ -79,7 +80,7 @@ export default function Home() {
             <h1 className="text-5xl font-bold underline text-[#8785A2] mb-10">My Form Builder</h1>
             <h2 className="text-3xl text-[#FFC7C7] mb-10">Simple HTML Form Builder</h2>
             <div className="w-full min-h-[300px] flex justify-center items-start gap-5 flex-wrap xl:flex-nowrap">
-                <Layout list={list} onClick={onClick} />
+                <Layout list={list} onClick={handleClick} />
                 <Creator
                     name={name}
                     setName={setName}
@@ -88,8 +89,8 @@ export default function Home() {
                     validations={validations}
                     setValidations={setValidations}
                     selectedOption={selectedOption}
-                    handleSelect={handleSelect}
-                    handleSubmit={handleSubmit}
+                    onSelect={handleSelect}
+                    onSubmit={handleSubmit}
                 />
                 <Code html={html} />
             </div>

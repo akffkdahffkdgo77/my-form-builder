@@ -10,21 +10,21 @@
 
   <h3>🗒️ Project Description</h3>
 
-  __*Clone Coding [react-hook-form's form builder](https://react-hook-form.com/form-builder/ 'react-hook-form form-builder')*__
+**_Clone Coding [react-hook-form's form builder](https://react-hook-form.com/form-builder/ 'react-hook-form form-builder')_**
 
   <h3>😎 Project Features</h3>
 
-  ✨ Layout   
-  ✨ Creator   
-  ✨ Code   
-  ✨ Copy to Clipboard   
-  ✨ Responsive UI   
+✨ Layout  
+ ✨ Creator  
+ ✨ Code  
+ ✨ Copy to Clipboard  
+ ✨ Responsive UI
 
   <h3>🔮 v1.0.1 (TO-BE)</h3>
 
-  ✨ Edit   
-  ✨ Delete   
-  ✨ Delete All   
+✨ Edit  
+ ✨ Delete  
+ ✨ Delete All
 
   <h3>📁 Folder Structure</h3>
   <img width="297" alt="스크린샷 2023-01-01 오후 7 15 23" src="https://user-images.githubusercontent.com/52883505/210167352-3e2734ea-616b-421b-b074-e479ead5a7fe.png">
@@ -40,8 +40,8 @@
   <img src="https://img.shields.io/badge/-sortablejs-black?style=for-the-badge" alt="sortablejs" />
   <img src="https://img.shields.io/badge/-react--syntax--highlighter-black?style=for-the-badge" alt="react-syntax-highlighter" />
   <br/>
-  <img src="https://img.shields.io/badge/-@heroicons/react-black?style=for-the-badge" alt="@heroicons/react" />
   <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
+  <img src="https://img.shields.io/badge/-heroicons-8B5CF6?style=for-the-badge" alt="heroicons" />
 
   <h3>🪄 Code Conventions</h3>
 
