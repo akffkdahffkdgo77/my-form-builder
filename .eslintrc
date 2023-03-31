@@ -37,7 +37,8 @@
         }
     },
     "rules": {
-        "prettier/prettier": "off",
+        "no-restricted-exports": "off",
+        "import/prefer-default-export": "off",
         "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }],
         "import/extensions": ["error", "ignorePackages", { "js": "never", "jsx": "never", "ts": "never", "tsx": "never", "": "never" }],
         "import/order": [
@@ -48,6 +49,11 @@
                     {
                         "pattern": "react",
                         "group": "external",
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "lib",
+                        "group": "internal",
                         "position": "before"
                     }
                 ],

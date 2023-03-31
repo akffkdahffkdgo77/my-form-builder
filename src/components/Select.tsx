@@ -1,12 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { OPTIONS } from 'constants/data';
+type OptionType = { label: string; value: string };
 
-import type { SelectPropsType } from 'components/Select/types';
+type SelectType = {
+    id: string;
+    name: string;
+    options: OptionType[];
+    selectedOption: OptionType;
+    onSelect: (option: OptionType) => void;
+};
 
-export default function Select({ selectedOption, onSelect }: SelectPropsType) {
+export default function Select({ id, name, options, selectedOption, onSelect }: SelectType) {
     const [show, setShow] = useState(false);
-
     const selectRef = useRef<HTMLDivElement>(null);
 
     const handleClick = (option: { label: string; value: string }) => onSelect(option);
@@ -23,8 +28,8 @@ export default function Select({ selectedOption, onSelect }: SelectPropsType) {
     }, []);
 
     return (
-        <label htmlFor="type" className="relative block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
-            type
+        <label htmlFor={id} className="relative block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
+            {name}
             <div
                 ref={selectRef}
                 tabIndex={0}
@@ -36,7 +41,7 @@ export default function Select({ selectedOption, onSelect }: SelectPropsType) {
                 {selectedOption.label}
             </div>
             <ul className={`${show ? 'block' : 'hidden'} absolute top-[62px] left-[-1px] right-[-1px] bg-white rounded-md overflow-hidden`}>
-                {OPTIONS.map(({ label, value }) => (
+                {options.map(({ label, value }) => (
                     <li
                         key={value}
                         className={`${selectedOption.value === value ? 'bg-[#FFE2E2]' : 'bg-white'} h-10 border-b border-[#F6F6F6] [line-height:40px] px-2.5 text-[#8785A2] hover:bg-[#FFE2E2]`}
