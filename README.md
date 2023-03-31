@@ -15,6 +15,7 @@
   <img src="https://img.shields.io/badge/-react--sortablejs-black?style=flat" alt="react-sortablejs" />
   <img src="https://img.shields.io/badge/-sortablejs-black?style=flat" alt="sortablejs" />
   <img src="https://img.shields.io/badge/-react--syntax--highlighter-black?style=flat" alt="react-syntax-highlighter" />
+  <img src="https://img.shields.io/badge/-zustand-black?style=flat" alt="zustand" />
   <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
   <img src="https://img.shields.io/badge/-heroicons-8B5CF6?style=flat" alt="heroicons" />
   <img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=flat&logo=yarn&logoColor=white" alt="Yarn" />
