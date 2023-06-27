@@ -1,13 +1,8 @@
 import { useCallback, useState } from 'react';
 
-import Heading from 'components/Heading';
-import Input from 'components/Input';
-import Select from 'components/Select';
-import Options from 'features/Creator/Options';
-import Validation from 'features/Creator/Validation';
-import { useBoundStore } from 'lib/zustand/store';
+import { Checkbox, Input, Select, Typography } from '@components';
 
-import SubmitButton from './SubmitButton';
+import { useBoundStore } from '@zustand/store';
 
 const OPTIONS = [
     { value: 'text', label: 'Text' },
@@ -36,8 +31,7 @@ export default function Creator() {
 
     const [name, setName] = useState('');
     const [selectedOption, setSelectedOption] = useState(OPTIONS[0]);
-
-    const handleSelect = ({ label, value }: { label: string; value: string }) => setSelectedOption({ label, value });
+    const [isValidationVisible, setIsValidationVisible] = useState(false);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -68,16 +62,36 @@ export default function Creator() {
     };
 
     const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setName(e.currentTarget.value), [setName]);
+    const handleSelect = useCallback(({ label, value }: { label: string; value: string }) => setSelectedOption({ label, value }), [setSelectedOption]);
+    const handleOptions = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setOptions(e.currentTarget.value), [setOptions]);
+    const handleValidation = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setValidations({ ...validations, [e.currentTarget.name]: e.currentTarget.value }), [validations, setValidations]);
 
     return (
-        <section className="border border-[#8785A2] min-w-[400px] max-w-[500px] w-full rounded-md p-5">
-            <Heading text="Creator" />
+        <section className="w-full min-w-[400px] max-w-[500px] rounded-md border border-[#8785A2] p-5">
+            <Typography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
+                Creator
+            </Typography>
             <form onSubmit={handleSubmit}>
                 <Input label="NAME" name="name" placeholder="Please enter the name of input" value={name} onChange={handleChange} />
                 <Select id="type" name="type" options={OPTIONS} selectedOption={selectedOption} onSelect={handleSelect} />
-                {(selectedOption.value === 'select' || selectedOption.value === 'radio') && <Options />}
-                <Validation />
-                <SubmitButton />
+                {(selectedOption.value === 'select' || selectedOption.value === 'radio') && (
+                    <>
+                        <Input label="OPTIONS" name="options" placeholder="Enter options separated by ," value={options} onChange={handleOptions} />
+                        <Typography component="small" className="mt-[-15px] mb-5 ml-2.5 block text-[10px] font-bold text-[#8785A2]">
+                            옵션 값은 , 로 구분해주세요.
+                        </Typography>
+                    </>
+                )}
+                <Checkbox id="validation" name="validation" label="Show Validation" onChange={() => setIsValidationVisible((prev) => !prev)} />
+                {isValidationVisible && (
+                    <div className="mb-5 rounded-md border border-[#8785A2] p-5">
+                        <Input label="MAX" name="max" placeholder="" value={validations.max} onChange={handleValidation} />
+                        <Input label="MIN" name="min" placeholder="" value={validations.min} onChange={handleValidation} />
+                        <Input label="MAXLENGTH" name="maxLength" placeholder="" value={validations.maxLength} onChange={handleValidation} />
+                        <Input label="PATTERN" name="pattern" placeholder="" value={validations.pattern} onChange={handleValidation} />
+                    </div>
+                )}
+                <input type="submit" value="Create" className="mb-2.5 h-[50px] w-full cursor-pointer rounded-md bg-[#FFC7C7] font-semibold uppercase text-[#8785A2] hover:scale-95" />
             </form>
         </section>
     );

@@ -1,17 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
-import BaseLayout from 'features/BaseLayout';
-import Home from 'pages/Home';
+import BaseLayout from '@layout/BaseLayout';
+import Home from '@pages/Home';
 
-function Router() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<BaseLayout />}>
-                    <Route index element={<Home />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    );
-}
-export default Router;
+const router = createBrowserRouter([
+    {
+        path: '',
+        element: <BaseLayout />,
+        children: [
+            {
+                path: '',
+                element: <Home />
+            }
+        ]
+    }
+]);
+
+export default router;

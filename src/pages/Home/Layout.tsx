@@ -1,10 +1,12 @@
 import { ReactSortable } from 'react-sortablejs';
 
-import ListItem from 'features/Layout/ListItem';
-import { ListType } from 'lib/zustand/formSlice';
-import { useBoundStore } from 'lib/zustand/store';
+import Typography from '@components/Typography';
 
-export default function List() {
+import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
+import { ListType } from '@zustand/formSlice';
+import { useBoundStore } from '@zustand/store';
+
+export default function Layout() {
     const { list, options, validations, setList, setHTML } = useBoundStore();
 
     const handleClick = (newState: ListType[]) => {
@@ -35,10 +37,24 @@ export default function List() {
     };
 
     return (
-        <ReactSortable list={list} setList={handleClick}>
-            {list.map((item) => (
-                <ListItem key={item.id} item={item} />
-            ))}
-        </ReactSortable>
+        <section className="min-h-[300px] w-full min-w-[300px] max-w-[500px] rounded-md border border-[#8785A2] p-5 lg:h-full lg:min-h-full">
+            <Typography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
+                Layout
+            </Typography>
+            <ReactSortable list={list} setList={handleClick}>
+                {list.map((item) => (
+                    <div
+                        key={item.id}
+                        className="mb-5 flex h-14 cursor-grab items-center rounded-md border border-[#FFC7C7] bg-[#FFE2E2] px-2.5 text-[16px] font-medium text-[#8785A2] [line-height:40px]"
+                    >
+                        <div className="mr-2.5 flex items-center">
+                            <EllipsisVerticalIcon className="h-6 w-6" />
+                            <EllipsisVerticalIcon className="ml-[-18px] h-6 w-6" />
+                        </div>
+                        {item.name}
+                    </div>
+                ))}
+            </ReactSortable>
+        </section>
     );
 }

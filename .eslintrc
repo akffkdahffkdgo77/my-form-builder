@@ -16,7 +16,7 @@
         "plugin:prettier/recommended", // eslint-plugin-prettier, eslint-config-prettier 설정 적용하려면 필수
         "plugin:react/jsx-runtime"
     ],
-    "plugins": ["prettier", "@typescript-eslint"],
+    "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import"],
     "parserOptions": {
         "ecmaVersion": 12,
         "sourceType": "module",
@@ -24,37 +24,46 @@
             "jsx": true
         }
     },
-    "ignorePatterns": ["node_modules/", "serviceWorker.ts", "setupTests.ts"],
     "settings": {
         "import/resolver": {
-            "node": {
-                "paths": ["src"],
-                "extensions": [".js", ".jsx", ".ts", ".tsx"]
-            }
+            "typescript": {}
         },
         "react": {
             "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
         }
     },
     "rules": {
+        "import/extensions": "off",
+        "no-nested-ternary": "off",
         "no-restricted-exports": "off",
+        "react/jsx-props-no-spreading": "off",
         "import/prefer-default-export": "off",
-        "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }],
-        "import/extensions": ["error", "ignorePackages", { "js": "never", "jsx": "never", "ts": "never", "tsx": "never", "": "never" }],
+        "import/no-extraneous-dependencies": "off",
+        "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
         "import/order": [
             "error",
             {
                 "groups": ["builtin", "external", "internal", ["parent", "sibling"], "index", "object", "type"],
                 "pathGroups": [
                     {
-                        "pattern": "react",
+                        "pattern": "{react*,react*/**}",
                         "group": "external",
                         "position": "before"
                     },
                     {
-                        "pattern": "lib",
-                        "group": "internal",
+                        "pattern": "@components/**",
+                        "group": "external",
                         "position": "before"
+                    },
+                    {
+                        "pattern": "{@zustand/**,@utils/**,@styles/**,@heroicons/**,*.+(css|scss)}",
+                        "patternOptions": {
+                            "dot": true,
+                            "nocomment": true,
+                            "matchBase": true
+                        },
+                        "group": "object",
+                        "position": "after"
                     }
                 ],
                 "pathGroupsExcludedImportTypes": ["react"],

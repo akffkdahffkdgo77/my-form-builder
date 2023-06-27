@@ -46,7 +46,7 @@
 
 ```
 -- components        # reusable components
--- features          # feature-related
+-- layout            # layout component
 -- lib               # configs/files for external libraries
 -- pages             # page
 -- routes            # router

@@ -1,6 +1,6 @@
-import Code from 'features/Code';
-import Creator from 'features/Creator';
-import Layout from 'features/Layout';
+import Code from './Code';
+import Creator from './Creator';
+import Layout from './Layout';
 
 export default function Home() {
     return (

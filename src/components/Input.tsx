@@ -1,4 +1,4 @@
-type InputType = {
+type InputType = React.InputHTMLAttributes<HTMLInputElement> & {
     label: string;
     name: string;
     value: string;
@@ -6,11 +6,12 @@ type InputType = {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function Input({ label, placeholder, name, value, onChange }: InputType) {
+export default function Input({ label, placeholder, name, value, onChange, ...props }: InputType) {
     return (
-        <label htmlFor={name} className="block uppercase text-[#FFC7C7] text-[14px] font-bold tracking-wider mb-5">
+        <label htmlFor={name} className="mb-5 block text-[14px] font-bold uppercase tracking-wider text-[#FFC7C7]">
             {label}
             <input
+                {...props}
                 id={name}
                 type="text"
                 name={name}
@@ -18,7 +19,7 @@ export default function Input({ label, placeholder, name, value, onChange }: Inp
                 required
                 placeholder={placeholder}
                 onChange={onChange}
-                className="h-10 w-full border border-[#8785A2] rounded-md font-medium p-2.5 text-[12px] text-[#8785A2]"
+                className="h-10 w-full rounded-md border border-[#8785A2] p-2.5 text-[12px] font-medium text-[#8785A2]"
             />
         </label>
     );
