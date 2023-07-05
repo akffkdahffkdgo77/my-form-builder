@@ -1,3 +1,5 @@
+'use client';
+
 import { useCallback, useState } from 'react';
 
 import { Checkbox, Input, Select, Typography } from '@components';
@@ -77,7 +79,7 @@ export default function Creator() {
                 {(selectedOption.value === 'select' || selectedOption.value === 'radio') && (
                     <>
                         <Input label="OPTIONS" name="options" placeholder="Enter options separated by ," value={options} onChange={handleOptions} />
-                        <Typography component="small" className="mt-[-15px] mb-5 ml-2.5 block text-[10px] font-bold text-[#8785A2]">
+                        <Typography component="small" className="mb-5 ml-2.5 mt-[-15px] block text-[10px] font-bold text-[#8785A2]">
                             옵션 값은 , 로 구분해주세요.
                         </Typography>
                     </>

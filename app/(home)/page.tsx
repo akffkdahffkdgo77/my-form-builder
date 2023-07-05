@@ -1,6 +1,6 @@
-import Code from './Code';
-import Creator from './Creator';
-import Layout from './Layout';
+import Code from './code';
+import Creator from './creator';
+import Layout from './drag-n-drop';
 
 export default function Home() {
     return (

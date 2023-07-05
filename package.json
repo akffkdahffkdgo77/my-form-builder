@@ -1,70 +1,47 @@
 {
     "name": "my-form-builder",
     "version": "1.0.0",
-    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "prettier": "prettier --write --config ./.prettierrc \"**/*.{ts,tsx}\"",
+        "lint": "eslint \"**/*.{ts,tsx}\"",
+        "lint:fix": "eslint --fix \"**/*.{ts,tsx}\""
+    },
     "dependencies": {
-        "@craco/craco": "^7.1.0",
-        "@heroicons/react": "^2.0.13",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-router-dom": "^6.6.1",
-        "react-scripts": "^5.0.1",
+        "@heroicons/react": "^2.0.18",
+        "next": "13.4.8",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
         "react-sortablejs": "^6.1.4",
         "react-syntax-highlighter": "^15.5.0",
         "sortablejs": "^1.15.0",
-        "zustand": "^4.3.6"
-    },
-    "scripts": {
-        "start": "craco start",
-        "build": "craco build",
-        "test": "craco test",
-        "eject": "react-scripts eject",
-        "prettier": "prettier --write --config ./.prettierrc \"**/*.{ts,tsx}\"",
-        "lint": "eslint './src/**/*.{ts,tsx}'",
-        "lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+        "typescript": "5.1.6",
+        "zustand": "^4.3.8"
     },
     "devDependencies": {
-        "@types/node": "^18.7.16",
-        "@types/react": "^18.0.19",
-        "@types/react-dom": "^18.0.6",
-        "@types/react-router-dom": "^5.3.3",
-        "@types/react-syntax-highlighter": "^15.5.5",
-        "@types/sortablejs": "^1.15.0",
-        "@typescript-eslint/eslint-plugin": "^5.32.0",
-        "@typescript-eslint/parser": "^5.32.0",
-        "autoprefixer": "^10.4.8",
+        "@types/node": "20.3.3",
+        "@types/react": "18.2.14",
+        "@types/react-dom": "18.2.6",
+        "@types/react-syntax-highlighter": "^15.5.7",
+        "@types/sortablejs": "^1.15.1",
+        "@typescript-eslint/eslint-plugin": "^5.61.0",
+        "@typescript-eslint/parser": "^5.61.0",
+        "autoprefixer": "10.4.14",
         "eslint": "^7.32.0 || ^8.2.0",
         "eslint-config-airbnb": "^19.0.4",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-import-resolver-typescript": "^3.5.5",
+        "eslint-config-next": "13.4.8",
+        "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-import": "^2.25.3",
         "eslint-plugin-jsx-a11y": "^6.5.1",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "^7.28.0",
         "eslint-plugin-react-hooks": "^4.3.0",
-        "postcss": "^8.4.16",
-        "prettier": "^2.5.1",
+        "postcss": "8.4.24",
+        "prettier": "^2.8.8",
         "prettier-plugin-tailwindcss": "^0.3.0",
-        "react-app-alias": "^2.2.2",
-        "tailwindcss": "^3.1.8",
-        "typescript": "^4.8.3"
+        "tailwindcss": "3.3.2"
     }
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 type Props = React.HTMLAttributes<HTMLElement> & React.LabelHTMLAttributes<HTMLLabelElement>;

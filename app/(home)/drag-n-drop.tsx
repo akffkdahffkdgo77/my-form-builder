@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactSortable } from 'react-sortablejs';
 
 import Typography from '@components/Typography';
@@ -6,7 +8,7 @@ import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
 import { ListType } from '@zustand/formSlice';
 import { useBoundStore } from '@zustand/store';
 
-export default function Layout() {
+export default function DragNDrop() {
     const { list, options, validations, setList, setHTML } = useBoundStore();
 
     const handleClick = (newState: ListType[]) => {
@@ -37,7 +39,7 @@ export default function Layout() {
     };
 
     return (
-        <section className="min-h-[300px] w-full min-w-[300px] max-w-[500px] rounded-md border border-[#8785A2] p-5 lg:h-full lg:min-h-full">
+        <section className="min-h-[300px] w-full min-w-[300px] max-w-[500px] rounded-md border border-[#8785A2] p-5">
             <Typography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
                 Layout
             </Typography>
