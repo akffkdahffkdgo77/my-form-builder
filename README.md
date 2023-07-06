@@ -1,9 +1,9 @@
-<img width="1500" alt="스크린샷 2022-10-08 오후 5 04 00" src="https://user-images.githubusercontent.com/52883505/194697113-15580320-1989-42d8-829b-8d5c6bcedcc1.png">
+<img width="1500" alt="My Form Builder" src="https://user-images.githubusercontent.com/52883505/194697113-15580320-1989-42d8-829b-8d5c6bcedcc1.png">
 
 ---
 
 <div>
-  <a href="https://github.com/namiein/weekly-clone-coding">
+  <a href="https://github.com/akffkdahffkdgo77/weekly-clone-coding">
     <img src="https://img.shields.io/badge/Part%202-Weekly%20Clone%20Coding-blue?style=flat" alt="Part 2" />
   </a>
   <img src="https://img.shields.io/badge/Duration-2022--10--03%20~%202022--10--10-ff69b4" alt="Duration" />
@@ -41,14 +41,3 @@
 -   [ ] Edit
 -   [ ] Delete
 -   [ ] Delete All
-
-### 📁 Folder Structure
-
-```
--- components        # reusable components
--- layout            # layout component
--- lib               # configs/files for external libraries
--- pages             # page
--- routes            # router
--- styles            # tailwindcss
-```

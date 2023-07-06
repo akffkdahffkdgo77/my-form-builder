@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 
 type OptionType = { label: string; value: string };
@@ -10,7 +12,7 @@ type SelectType = {
     onSelect: (option: OptionType) => void;
 };
 
-export default function Select({ id, name, options, selectedOption, onSelect }: SelectType) {
+export default function CustomizedSelect({ id, name, options, selectedOption, onSelect }: SelectType) {
     const [show, setShow] = useState(false);
     const selectRef = useRef<HTMLDivElement>(null);
     const listRef = useRef<HTMLUListElement | null>(null);
@@ -45,7 +47,7 @@ export default function Select({ id, name, options, selectedOption, onSelect }: 
                 {selectedOption.label}
             </div>
             {show && (
-                <ul ref={listRef} className="absolute top-[62px] left-[-1px] right-[-1px] max-h-[240px] overflow-hidden overflow-y-auto rounded-md bg-white">
+                <ul ref={listRef} className="absolute left-[-1px] right-[-1px] top-[62px] max-h-[240px] overflow-hidden overflow-y-auto rounded-md bg-white">
                     {options.map(({ label, value }) => (
                         <li
                             key={value}
