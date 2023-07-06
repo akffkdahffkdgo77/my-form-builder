@@ -24,8 +24,9 @@
         }
     },
     "rules": {
-        "no-restricted-exports": "off",
         "import/extensions": "off",
+        "no-restricted-exports": "off",
+        "react/require-default-props": "off",
         "react/jsx-props-no-spreading": "off",
         "import/prefer-default-export": "off",
         "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],

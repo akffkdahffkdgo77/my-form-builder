@@ -4,16 +4,17 @@ type InputType = React.InputHTMLAttributes<HTMLInputElement> & {
     value: string;
     placeholder: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    type?: string;
 };
 
-export default function Input({ label, placeholder, name, value, onChange, ...props }: InputType) {
+export default function CustomizedInput({ label, type = 'text', placeholder, name, value, onChange, ...props }: InputType) {
     return (
         <label htmlFor={name} className="mb-5 block text-[14px] font-bold uppercase tracking-wider text-[#FFC7C7]">
             {label}
             <input
                 {...props}
                 id={name}
-                type="text"
+                type={type}
                 name={name}
                 value={value}
                 required

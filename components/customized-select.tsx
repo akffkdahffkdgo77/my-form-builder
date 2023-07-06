@@ -12,7 +12,7 @@ type SelectType = {
     onSelect: (option: OptionType) => void;
 };
 
-export default function Select({ id, name, options, selectedOption, onSelect }: SelectType) {
+export default function CustomizedSelect({ id, name, options, selectedOption, onSelect }: SelectType) {
     const [show, setShow] = useState(false);
     const selectRef = useRef<HTMLDivElement>(null);
     const listRef = useRef<HTMLUListElement | null>(null);

@@ -2,7 +2,7 @@
 
 import { ReactSortable } from 'react-sortablejs';
 
-import Typography from '@components/Typography';
+import CustomizedTypography from '@/components/customized-typography';
 
 import { EllipsisVerticalIcon } from '@heroicons/react/24/outline';
 import { ListType } from '@zustand/formSlice';
@@ -40,9 +40,9 @@ export default function DragNDrop() {
 
     return (
         <section className="min-h-[300px] w-full min-w-[300px] max-w-[500px] rounded-md border border-[#8785A2] p-5">
-            <Typography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
+            <CustomizedTypography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
                 Layout
-            </Typography>
+            </CustomizedTypography>
             <ReactSortable list={list} setList={handleClick}>
                 {list.map((item) => (
                     <div

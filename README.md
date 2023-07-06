@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<img width="1500" alt="My Form Builder" src="https://user-images.githubusercontent.com/52883505/194697113-15580320-1989-42d8-829b-8d5c6bcedcc1.png">
 
-## Getting Started
+---
 
-First, run the development server:
+<div>
+  <a href="https://github.com/akffkdahffkdgo77/weekly-clone-coding">
+    <img src="https://img.shields.io/badge/Part%202-Weekly%20Clone%20Coding-blue?style=flat" alt="Part 2" />
+  </a>
+  <img src="https://img.shields.io/badge/Duration-2022--10--03%20~%202022--10--10-ff69b4" alt="Duration" />
+  <br/>
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white" alt="React Router" />
+  <img src="https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=flat&logo=reacthookform&logoColor=white" alt="React Hook Form" />
+  <img src="https://img.shields.io/badge/-react--sortablejs-black?style=flat" alt="react-sortablejs" />
+  <img src="https://img.shields.io/badge/-sortablejs-black?style=flat" alt="sortablejs" />
+  <img src="https://img.shields.io/badge/-react--syntax--highlighter-black?style=flat" alt="react-syntax-highlighter" />
+  <img src="https://img.shields.io/badge/-zustand-black?style=flat" alt="zustand" />
+  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
+  <img src="https://img.shields.io/badge/-heroicons-8B5CF6?style=flat" alt="heroicons" />
+  <img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=flat&logo=yarn&logoColor=white" alt="Yarn" />
+  <img src="https://img.shields.io/badge/ESLint-4B3263?style=flat&logo=eslint&logoColor=white" alt="ESLint" />
+  <img src="https://img.shields.io/badge/Airbnb-%23ff5a5f.svg?style=flat&logo=Airbnb&logoColor=white" alt="Airbnb" />
+  <img src="https://img.shields.io/badge/prettier-1A2C34?style=flat&logo=prettier&logoColor=F7BA3E" alt="Prettier" />
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### 🗒️ Project Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**_Clone Coding [react-hook-form's form builder](https://react-hook-form.com/form-builder/ 'react-hook-form form-builder')_**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 😎 Project Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+-   [x] Layout
+-   [x] Creator
+-   [x] Code
+-   [x] Copy to Clipboard
+-   [x] Responsive UI
 
-## Learn More
+### 🔮 v1.0.1 (TO-BE)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   [ ] Edit
+-   [ ] Delete
+-   [ ] Delete All

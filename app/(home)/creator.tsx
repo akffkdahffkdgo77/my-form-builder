@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from 'react';
 
-import { Checkbox, Input, Select, Typography } from '@components';
+import { CustomizedCheckbox, CustomizedInput, CustomizedSelect, CustomizedTypography } from '@components';
 
 import { useBoundStore } from '@zustand/store';
 
@@ -70,30 +70,32 @@ export default function Creator() {
 
     return (
         <section className="w-full min-w-[400px] max-w-[500px] rounded-md border border-[#8785A2] p-5">
-            <Typography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
+            <CustomizedTypography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
                 Creator
-            </Typography>
-            <form onSubmit={handleSubmit}>
-                <Input label="NAME" name="name" placeholder="Please enter the name of input" value={name} onChange={handleChange} />
-                <Select id="type" name="type" options={OPTIONS} selectedOption={selectedOption} onSelect={handleSelect} />
+            </CustomizedTypography>
+            <form autoComplete="off" onSubmit={handleSubmit}>
+                <CustomizedInput label="NAME" name="name" placeholder="Please enter the name of input" value={name} onChange={handleChange} />
+                <CustomizedSelect id="type" name="type" options={OPTIONS} selectedOption={selectedOption} onSelect={handleSelect} />
                 {(selectedOption.value === 'select' || selectedOption.value === 'radio') && (
                     <>
-                        <Input label="OPTIONS" name="options" placeholder="Enter options separated by ," value={options} onChange={handleOptions} />
-                        <Typography component="small" className="mb-5 ml-2.5 mt-[-15px] block text-[10px] font-bold text-[#8785A2]">
+                        <CustomizedInput label="OPTIONS" name="options" placeholder="Enter options separated by ," value={options} onChange={handleOptions} />
+                        <CustomizedTypography component="small" className="mb-5 ml-2.5 mt-[-15px] block text-[10px] font-bold text-[#8785A2]">
                             옵션 값은 , 로 구분해주세요.
-                        </Typography>
+                        </CustomizedTypography>
                     </>
                 )}
-                <Checkbox id="validation" name="validation" label="Show Validation" onChange={() => setIsValidationVisible((prev) => !prev)} />
+                <CustomizedCheckbox id="validation" name="validation" label="Show Validation" onChange={() => setIsValidationVisible((prev) => !prev)} />
                 {isValidationVisible && (
                     <div className="mb-5 rounded-md border border-[#8785A2] p-5">
-                        <Input label="MAX" name="max" placeholder="" value={validations.max} onChange={handleValidation} />
-                        <Input label="MIN" name="min" placeholder="" value={validations.min} onChange={handleValidation} />
-                        <Input label="MAXLENGTH" name="maxLength" placeholder="" value={validations.maxLength} onChange={handleValidation} />
-                        <Input label="PATTERN" name="pattern" placeholder="" value={validations.pattern} onChange={handleValidation} />
+                        <CustomizedInput label="MAX" name="max" placeholder="" value={validations.max} onChange={handleValidation} />
+                        <CustomizedInput label="MIN" name="min" placeholder="" value={validations.min} onChange={handleValidation} />
+                        <CustomizedInput label="MAXLENGTH" name="maxLength" placeholder="" value={validations.maxLength} onChange={handleValidation} />
+                        <CustomizedInput label="PATTERN" name="pattern" placeholder="" value={validations.pattern} onChange={handleValidation} />
                     </div>
                 )}
-                <input type="submit" value="Create" className="mb-2.5 h-[50px] w-full cursor-pointer rounded-md bg-[#FFC7C7] font-semibold uppercase text-[#8785A2] hover:scale-95" />
+                <button type="submit" className="mb-2.5 h-[50px] w-full cursor-pointer rounded-md bg-[#FFC7C7] font-semibold uppercase text-[#8785A2] hover:scale-95">
+                    Create
+                </button>
             </form>
         </section>
     );

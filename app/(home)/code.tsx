@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-import { Typography } from '@components';
+import { CustomizedTypography } from '@components';
 
 import { useBoundStore } from '@zustand/store';
 
@@ -35,9 +35,9 @@ export default function Code() {
 
     return (
         <section className="relative max-w-[500px] rounded-md border border-[#8785A2] p-5 text-[14px]">
-            <Typography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
+            <CustomizedTypography component="h3" className="mb-5 w-full text-center text-[20px] font-bold text-[#8785A2]">
                 Code
-            </Typography>
+            </CustomizedTypography>
             <button
                 type="button"
                 onClick={handleClick}

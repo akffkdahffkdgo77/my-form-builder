@@ -1,6 +1,6 @@
-import Checkbox from './Checkbox';
-import Input from './Input';
-import Select from './Select';
-import Typography from './Typography';
+import CustomizedCheckbox from './customized-checkbox';
+import CustomizedInput from './customized-input';
+import CustomizedSelect from './customized-select';
+import CustomizedTypography from './customized-typography';
 
-export { Checkbox, Input, Typography, Select };
+export { CustomizedCheckbox, CustomizedInput, CustomizedSelect, CustomizedTypography };
