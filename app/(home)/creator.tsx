@@ -74,7 +74,7 @@ export default function Creator() {
                 Creator
             </CustomizedTypography>
             <form autoComplete="off" onSubmit={handleSubmit}>
-                <CustomizedInput label="NAME" name="name" placeholder="Please enter the name of input" value={name} onChange={handleChange} />
+                <CustomizedInput label="NAME" name="name" required placeholder="Please enter the name of input" value={name} onChange={handleChange} />
                 <CustomizedSelect id="type" name="type" options={OPTIONS} selectedOption={selectedOption} onSelect={handleSelect} />
                 {(selectedOption.value === 'select' || selectedOption.value === 'radio') && (
                     <>

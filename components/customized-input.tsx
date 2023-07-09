@@ -17,7 +17,6 @@ export default function CustomizedInput({ label, type = 'text', placeholder, nam
                 type={type}
                 name={name}
                 value={value}
-                required
                 placeholder={placeholder}
                 onChange={onChange}
                 className="h-10 w-full rounded-md border border-[#8785A2] p-2.5 text-[12px] font-medium text-[#8785A2]"
