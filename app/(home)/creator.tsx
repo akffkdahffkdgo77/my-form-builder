@@ -61,6 +61,7 @@ export default function Creator() {
         setSelectedOption(DEFAULT_VALUES.option);
         setValidations(DEFAULT_VALUES.validations);
         setOptions(DEFAULT_VALUES.options);
+        setIsValidationVisible(false);
     };
 
     const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => setName(e.currentTarget.value), [setName]);
@@ -84,7 +85,7 @@ export default function Creator() {
                         </CustomizedTypography>
                     </>
                 )}
-                <CustomizedCheckbox id="validation" name="validation" label="Show Validation" onChange={() => setIsValidationVisible((prev) => !prev)} />
+                <CustomizedCheckbox id="validation" name="validation" label="Show Validation" checked={isValidationVisible} onChange={() => setIsValidationVisible((prev) => !prev)} />
                 {isValidationVisible && (
                     <div className="mb-5 rounded-md border border-[#8785A2] p-5">
                         <CustomizedInput label="MAX" name="max" placeholder="" value={validations.max} onChange={handleValidation} />
