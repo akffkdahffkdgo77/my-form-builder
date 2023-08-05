@@ -1,23 +1,17 @@
-<picture>
-  <source media="(max-width: 799px)" srcset="https://github.com/akffkdahffkdgo77/my-form-builder/assets/52883505/812bd01c-4229-48bb-b711-ce7a78b063c6" />
-  <source media="(min-width: 800px)" srcset="https://github.com/akffkdahffkdgo77/my-form-builder/assets/52883505/baca9505-2e20-4881-b793-0be269a9dfd5" />
-  <img width="1500" src="https://github.com/akffkdahffkdgo77/my-form-builder/assets/52883505/baca9505-2e20-4881-b793-0be269a9dfd5" alt="my form builder header" />
-</picture>
-<br/>
-<br/>
+<img src="https://capsule-render.vercel.app/api?section=header&type=waving&height=300&text=My%20Form%20Builder&color=gradient&fontSize=90&customColorList=0,2,2,5,30" alt="" />
 <table>
   <tbody>
     <tr>
-      <th align="left" width="200">프로젝트 소개</th>
+      <th align="left" width="200">Project Description</th>
       <td>
         <strong><i>Clone Coding <a href="https://react-hook-form.com/form-builder/">react-hook-form's form builder</a></i></strong>
       </td>
     </tr>
     <tr>
-      <th align="left" width="200">Weekly Clone Coding</th>
+      <th align="left" width="200">My Toy Projects</th>
       <td>
-        <a href="https://github.com/akffkdahffkdgo77/weekly-clone-coding">
-          <img src="https://img.shields.io/badge/Part%202-Weekly%20Clone%20Coding-blue?style=flat" alt="Part 2" />
+        <a href="https://github.com/akffkdahffkdgo77/my-toy-projects">
+          <img src="https://img.shields.io/badge/Part%202-My%20Toy%20Projects-blue?style=flat" alt="Part 2" />
         </a>
       </td>
     </tr>
@@ -45,7 +39,7 @@
       </td>
     </tr>
     <tr>
-      <th align="left" width="200">프로젝트 상태</th>
+      <th align="left" width="200">Project Status</th>
       <td>
         <img src="https://img.shields.io/badge/v1.0-2022--10--03%20~%202022--10--10-ffe5ec?style=flat" alt="v1.0" />
         <br/>
