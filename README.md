@@ -51,14 +51,6 @@
   </tbody>
 </table>
 
-## Demo
-
-### Creator Demo
-
-<img width="700" src="https://github.com/akffkdahffkdgo77/my-form-builder/assets/52883505/b6987388-581f-48ce-8cec-34f991e0124c" alt="creator demo" />
-<br/>
-<img width="700" src="https://github.com/akffkdahffkdgo77/my-form-builder/assets/52883505/50fb1e43-2ef4-4b47-ab58-d27e18f6011a" alt="creator type demo" />
-
 ## Project History
 
 ### 😎 v1.0
@@ -78,3 +70,11 @@
 -   [ ] Edit
 -   [ ] Delete
 -   [ ] Delete All
+
+## Demo
+
+### Creator Demo
+
+<img width="700" src="https://github.com/akffkdahffkdgo77/my-form-builder/assets/52883505/b6987388-581f-48ce-8cec-34f991e0124c" alt="creator demo" />
+<br/>
+<img width="700" src="https://github.com/akffkdahffkdgo77/my-form-builder/assets/52883505/50fb1e43-2ef4-4b47-ab58-d27e18f6011a" alt="creator type demo" />
